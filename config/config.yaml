@@ -1,0 +1,26 @@
+fold: 0
+data_path: './dataset/'
+img_size: 224
+train_batch_size: 256
+test_batch_size: 256
+num_workers: 0
+seed: 42
+step_size: 20
+gamma: 0.1
+lambda: 0.5
+lr: 0.001
+weight_decay: 0.0001
+num_epochs: 20
+save_path: 'checkpoints/classifier/'
+device: 'cuda:2'
+model:
+    name: 'resnet'
+    type: 'resnet18'
+    num_classes: 2
+    weights: null
+    self_attention: true
+    cam: true
+wandb:
+    project: 'Template'
+    name: 'Template'
+    tags: ['classifier']
